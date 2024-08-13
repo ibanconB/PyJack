@@ -56,6 +56,9 @@ while playerIn or dealerIn:
     if playerIn:
         stayOrHit = input("1: Stay\n2: Hit\n")
 
+        if stayOrHit not in ["1", "2"]:
+            raise Exception("WRONG CHOICE! SHOULD BE 1 OR 2")
+
     if total(dealerHand) > 16:
         dealerIn = False
     else:
